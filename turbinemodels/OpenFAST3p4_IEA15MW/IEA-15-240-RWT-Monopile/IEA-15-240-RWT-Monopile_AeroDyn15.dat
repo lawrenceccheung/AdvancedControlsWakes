@@ -12,7 +12,7 @@ False                  FrozenWake  - Assume frozen wake during linearization? (f
 False                  CavitCheck  - Perform cavitation check? (flag) [AFAeroMod must be 1 when CavitCheck=true]
 False                  Buoyancy    - Include buoyancy effects? (flag)
 False                  CompAA      - Flag to compute AeroAcoustics calculation [only used when WakeMod=1 or 2]
-AeroAcousticsInput.dat AA_InputFile - AeroAcoustics input file [used only when CompAA=true]
+"unused"			   AA_InputFile - AeroAcoustics input file [used only when CompAA=true]
 ======  Environmental Conditions  ===================================================================
 "default"              AirDens     - Air density (kg/m^3)
 "default"              KinVisc     - Kinematic air viscosity (m^2/s)
