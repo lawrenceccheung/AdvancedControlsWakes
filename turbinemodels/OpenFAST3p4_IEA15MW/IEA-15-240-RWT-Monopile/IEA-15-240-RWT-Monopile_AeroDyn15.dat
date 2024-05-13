@@ -152,6 +152,9 @@ False                  SumPrint    - Generate a summary file listing input optio
 "RtArea"
 "RtSpeed"
 "RtTSR"
+"B1Azimuth"
+"B2Azimuth"
+"B3Azimuth"
 END of input file (the word "END" must appear in the first 3 columns of this last OutList line)
 ====== Outputs for all blade stations (same ending as above for B1N1.... =========================== [optional section]
    3              BldNd_BladesOut     - Number of blades to output all node information at.  Up to number of blades on turbine. (-)
