@@ -162,8 +162,6 @@ END of input file (the word "END" must appear in the first 3 columns of this las
                   OutList             - The next line(s) contains a list of output parameters.  See OutListParameters.xlsx for a listing of available output channels, (-)
 Vrel
 Alpha
-Vindx
-Vindy
 Cl
 Cd
 Cn
