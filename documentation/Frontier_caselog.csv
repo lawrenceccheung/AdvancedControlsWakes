@@ -1,4 +1,4 @@
-OBNum,	Precursor,	Domain Size, Num turbines, streamwise spacing, lateral spacing, Controller,		Status, Frontier location
+Case,	Precursor,	Domain Size, Num turbines, streamwise spacing, lateral spacing, Controller,		Status, Frontier location
 1, 	Med WS/Low TI,	4.5km x 2km, 1,  	   N/A,	      	       N/A,    		Baseline,   		Done,   /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/Baseline
 2, 	Med WS/Low TI,	4.5km x 2km, 1,  	   N/A,	      	       N/A,    		Helix A=2 St=0.3,   	Done,   /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_Helix_A2_St_0p3
 3, 	Med WS/Low TI,	4.5km x 2km, 1,  	   N/A,	      	       N/A,    		Pulse A=2 St=0.3,   	Done,   /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_Pulse_A2_St_0p3
