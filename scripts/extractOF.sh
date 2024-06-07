@@ -4,7 +4,7 @@
 #
 
 DATADIR=./
-SUFFIX=OpenFAST
+PREFIX=OpenFAST
 
 # Parse the arguments and options
 # --------------------------
@@ -16,13 +16,13 @@ while (( "$#" )); do
 	    DATADIR=$2
 	    shift 2
 	    ;;
-	-s|--suffix)
-	    SUFFIX=$2
+	-p|--prefix)
+	    PREFIX=$2
 	    shift 2
 	    ;;	
 	-h|--help)
 	    echo "extractOF.sh OUTFILE VAR1 VAR2"
-	    return
+	    exit
 	    ;;
 	--) # end argument parsing
 	    shift
@@ -67,11 +67,6 @@ mkdir -p $DATADIR
 echo $OUTFILE
 for var in $@; do
     echo $var
-    grepOFcols $OUTFILE Time ${var} > $DATADIR/${SUFFIX}_${var}.dat
+    grepOFcols $OUTFILE Time ${var} > $DATADIR/${PREFIX}_${var}.dat
 done
 
-# grepOFcols $OUTFILE Time GenPwr > $DATADIR/AMRWIND_turb_GenPwr.dat
-# grepOFcols $OUTFILE Time RotTorq > $DATADIR/AMRWIND_turb_RotTorq.dat
-# grepOFcols $OUTFILE Time RotThrust > $DATADIR/AMRWIND_turb_RotThrust.dat
-# grepOFcols $OUTFILE Time RotSpeed > $DATADIR/AMRWIND_turb_RotSpeed.dat
-# grepOFcols $OUTFILE Time Wind1VelX > $DATADIR/AMRWIND_turb_Wind1VelX.dat
