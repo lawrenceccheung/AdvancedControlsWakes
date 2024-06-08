@@ -1,0 +1,81 @@
+openfast:
+  - name: T0
+    filename: ../MedWS_LowTI_4kmx2km_5m/T0_OpenFAST3p5_IEA15MW/IEA-15-240-RWT-Monopile/IEA-15-240-RWT-Monopile.out
+    vars: 
+    - GenPwr
+    - RotTorq
+    datadir: OpenFAST  # optional
+    prefix: T0
+
+instantaneousplanes:
+  - name: coarse XY plane
+    ncfile: ../MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_103125.nc
+    iters:  [1000]
+    iplane: 0
+    xaxis: x
+    yaxis: y
+    # --- optional stuff here ---
+    title: 'XY Horizontal velocity T={time:0.2f}'
+    plotfunc: "lambda u, v, w: np.sqrt(u**2 + v**2)"    
+    clevels: 'np.linspace(0, 12, 121)'
+    xlabel: 'X [m]'
+    ylabel: 'Y [m]'
+
+  - name: coarse XZ plane
+    ncfile: ../MedWS_LowTI_4kmx2km_5m/post_processing/XZdomaincoarse_103125.nc
+    iters:  [1000]
+    iplane: 0
+    xaxis: x
+    yaxis: z
+    # --- optional stuff here ---
+    title: 'XZ Horizontal velocity T={time:0.2f}'
+    plotfunc: "lambda u, v, w: np.sqrt(u**2 + v**2)"    
+    clevels: 'np.linspace(0, 12, 121)'
+    xlabel: 'X [m]'
+    ylabel: 'Z [m]'
+
+  - name: Wake YZ plane
+    ncfile: ../MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_103125.nc
+    iters:  [1000]
+    iplane: 5
+    xaxis: y
+    yaxis: z
+    # --- optional stuff here ---
+    group: T0_YZ_wake2    
+    title: 'YZ Horizontal velocity T={time:0.2f}'
+    plotfunc: "lambda u, v, w: np.sqrt(u**2 + v**2)"    
+    clevels: 'np.linspace(0, 12, 121)'
+    xlabel: 'Y [m]'
+    ylabel: 'Z [m]'
+
+  - name: Wake YZ plane
+    ncfile: ../MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_103125.nc
+    iters:  [1000]
+    iplane: 4
+    xaxis: y
+    yaxis: z
+    # --- optional stuff here ---
+    group: T0_YZ_wake3    
+    title: 'YZ Horizontal velocity T={time:0.2f}'
+    plotfunc: "lambda u, v, w: np.sqrt(u**2 + v**2)"    
+    clevels: 'np.linspace(0, 12, 121)'
+    xlabel: 'Y [m]'
+    ylabel: 'Z [m]'    
+
+avgplanes:
+  - name: coarse XY plane
+    ncfile:
+    - ../MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_68125.nc
+    - ../MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_103125.nc
+    tavg: [27000, 29000]
+    savepklfile: 'test.pkl'  # optional
+    plot:  # optional
+        iplane: 0
+        xaxis: x
+        yaxis: y
+        title: 'XY Horizontal velocity'
+        plotfunc: "lambda u, v, w: np.sqrt(u**2 + v**2)"    
+        clevels: 'np.linspace(0, 12, 121)'
+        xlabel: 'X [m]'
+        ylabel: 'Y [m]'
+        savefile: avgXYdomaincoarse.png
