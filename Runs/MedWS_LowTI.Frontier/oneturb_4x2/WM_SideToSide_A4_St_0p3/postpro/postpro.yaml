@@ -1,6 +1,6 @@
 openfast:
   - name: T0
-    filename: /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/Baseline/MedWS_LowTI_4kmx2km_5m/T0_OpenFAST3p5_IEA15MW/IEA-15-240-RWT-Monopile/IEA-15-240-RWT-Monopile.out
+    filename: /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/T0_OpenFAST3p5_IEA15MW/IEA-15-240-RWT-Monopile/IEA-15-240-RWT-Monopile.out
     vars: 
     - Time
     - BldPitch1
@@ -29,7 +29,7 @@ openfast:
     - YawBrMzp
     - LSSTipMys
     - LSSTipMzs
-    datadir: OpenFAST_Baseline  # optional
+    datadir: OpenFAST # optional
     prefix: T0
 
 instantaneousplanes:
@@ -88,10 +88,12 @@ instantaneousplanes:
     ylabel: 'Z [m]'    
 
 avgplanes:
-  - name: Wake YZ plane 5D,6D,7D
+  - name: Wake YZ plane
     ncfile:
-    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/Baseline/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_68125.nc
-    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/Baseline/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_103125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_68125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_83125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_118125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_123125.nc
     tavg: [27800,28500]
     savepklfile: 'test.pkl'  # optional
     group: T0_YZ_wake4
@@ -104,17 +106,18 @@ avgplanes:
         clevels: 'np.linspace(0, 12, 121)'
         xlabel: 'Y [m]'
         ylabel: 'Z [m]'
-        savefile: avgYZ_6D.png
+        savefile: avgYZ_0.png
     rotor_avg: #optional
         iplane: 0 1 2
         Diam: 240.0
         zc: 150.0
         yc: 1000.0
-
   - name: Wake YZ plane 4D
     ncfile:
-    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/Baseline/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_68125.nc
-    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/Baseline/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_103125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_68125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_83125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_118125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_123125.nc
     tavg: [27800,28500]
     savepklfile: 'test.pkl'  # optional
     group: T0_YZ_wake3
