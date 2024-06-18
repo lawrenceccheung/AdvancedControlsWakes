@@ -34,7 +34,7 @@ openfast:
 
 instantaneousplanes:
   - name: coarse XY plane
-    ncfile: ../MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_103125.nc
+    ncfile: /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_83125.nc
     iters:  [1000]
     iplane: 0
     xaxis: x
@@ -45,6 +45,7 @@ instantaneousplanes:
     clevels: 'np.linspace(0, 12, 121)'
     xlabel: 'X [m]'
     ylabel: 'Y [m]'
+    savefile: coarse_XY_plane.png
 
   - name: coarse XZ plane
     ncfile: ../MedWS_LowTI_4kmx2km_5m/post_processing/XZdomaincoarse_103125.nc
@@ -88,6 +89,26 @@ instantaneousplanes:
     ylabel: 'Z [m]'    
 
 avgplanes:
+  - name: coarse XY plane
+    ncfile: 
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_68125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_83125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_118125.nc
+    - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/XYdomaincoarse_123125.nc
+    tavg: [27800,28500]
+    plot:
+        iplane: 0
+        xaxis: x
+        yaxis: y
+        # --- optional stuff here ---
+        title: 'XY Horizontal velocity'
+        plotfunc: "lambda u, v, w: np.sqrt(u**2 + v**2)"    
+        clevels: 'np.linspace(0, 12, 121)'
+        xlabel: 'X [m]'
+        ylabel: 'Y [m]'
+        savefile: avg_coarse_XY_plane.png
+
+
   - name: Wake YZ plane
     ncfile:
     - /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_SideToSide_A4_St_0p3/MedWS_LowTI_4kmx2km_5m/post_processing/YZwake_68125.nc
