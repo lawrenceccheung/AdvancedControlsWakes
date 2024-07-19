@@ -25,7 +25,7 @@ DISCON2p8_options = ("SDparam_DLL_FileName:/lustre/orion/cfd162/proj-shared/lche
                      )
 
 St           = 0.3
-AWC_NumModes = 1
+AWC_NumModes = 2
 AWC_n        = [1, -1]; AWC_n = '"{}"'.format(" ".join(map(str, AWC_n)));
 AWC_freq     = [St*WS/rotorD, St*WS/rotorD]; AWC_freq = '"{}"'.format(" ".join(map(str, AWC_freq)));
 AWC_amp      = [2.0,  2.0]; AWC_amp = '"{}"'.format(" ".join(map(str, AWC_amp)));
