@@ -1,4 +1,5 @@
 Case,	Precursor,	Domain Size, Num turbines, streamwise spacing, lateral spacing, Controller,		Status, Frontier location
+0, 	Med WS/Low TI,	4.5km x 2km, 0,  	   N/A,	      	       N/A,    		No turbine,   		Done,   /lustre/orion/cfd162/world-shared/kbrown1/Advanced_Control/Turbine_Runs/One_Turb/MedWS_LowTI/NoTurbine
 1, 	Med WS/Low TI,	4.5km x 2km, 1,  	   N/A,	      	       N/A,    		Baseline,   		Done,   /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/Baseline
 2, 	Med WS/Low TI,	4.5km x 2km, 1,  	   N/A,	      	       N/A,    		Helix A=2 St=0.3,   	Done,   /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_Helix_A2_St_0p3
 3, 	Med WS/Low TI,	4.5km x 2km, 1,  	   N/A,	      	       N/A,    		Pulse A=2 St=0.3,   	Done,   /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WM_Pulse_A2_St_0p3
@@ -12,4 +13,13 @@ Case,	Precursor,	Domain Size, Num turbines, streamwise spacing, lateral spacing,
 11, 	Med WS/Low TI,	4.5km x 2km, 1,  	   N/A,	      	       N/A,    		Wake Steering 20deg,   	Done,   /lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/MedWS_LowTI.Frontier/oneturb_4x2/WS_p20
 12,	Low WS/Low TI,  7km x 2km,   0,  	   N/A,	      	       N/A,    		No turbine,   		Done,	/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_noturbs/
 13,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Baseline,   		Done,	/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_baseline/
-
+14,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Helix A=2 St=0.3,   	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WM_Helix_A2_St_0p3
+15,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Pulse A=2 St=0.3,   	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WM_Pulse_A2_St_0p3
+16,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		S2S A=2 St=0.3,   	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WM_SideToSide_A2_St_0p3
+17,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Helix A=4 St=0.3,   	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WM_Helix_A4_St_0p3
+18,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Pulse A=4 St=0.3,   	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WM_Pulse_A4_St_0p3
+19,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		S2S A=4 St=0.3,   	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WM_SideToSide_A4_St_0p3
+20,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Wake Steering -20deg,	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WS_m20
+21,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Wake Steering -10deg,	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WS_m10
+22,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Wake Steering +10deg,	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WS_p10
+22,	Low WS/Low TI,  7km x 2km,   1,  	   N/A,	      	       N/A,    		Wake Steering +20deg,	Running,/lustre/orion/cfd162/world-shared/lcheung/AdvancedControlsWakes/Runs/LowWS_LowTI.Frontier/oneturb_7x2/rundir_WS_p20
