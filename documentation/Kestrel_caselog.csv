@@ -18,5 +18,5 @@ Case,"	Precursor","	Domain Size", Num turbines, streamwise spacing, lateral spac
 17," 	Med WS/Low TI","	4.5km x 2km",2,5D,-0.5D,"    		Helix A=4 St=0.3",Done,/projects/ssc/jfrederi/amr-wind-runs/snl_precursors/medWS_lowTI/offset_-0p5D/ccwhelix_St03_A40
 18," 	Med WS/Low TI","	4.5km x 2km",2,5D,-0.5D,"    		Pulse A=4 St=0.3",Done,/projects/ssc/jfrederi/amr-wind-runs/snl_precursors/medWS_lowTI/offset_-0p5D/dic_St03_A40
 19," 	Med WS/Low TI","	4.5km x 2km",2,5D,-0.5D,"    		S2S A=4 St=0.3",Done,/projects/ssc/jfrederi/amr-wind-runs/snl_precursors/medWS_lowTI/offset_-0p5D/sideside_St03_A40
-20," 	Med WS/Low TI","	4.5km x 2km",2,5D,-0.5D,"    		Wake Steering 20deg",Done,/projects/ssc/jfrederi/amr-wind-runs/snl_precursors/medWS_lowTI/offset_-0p5D/wakesteering_20deg
+20," 	Med WS/Low TI","	4.5km x 2km",2,5D,-0.5D,"    		Wake Steering -20deg",Done,/projects/ssc/jfrederi/amr-wind-runs/snl_precursors/medWS_lowTI/offset_-0p5D/wakesteering_-20deg
 21,Low WS/Low TI,7km x 2 km,1,"  	   N/A","	      	       N/A","    		Baseline",Seg Fault,
