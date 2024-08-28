@@ -56,7 +56,7 @@ grepOFcols() {
     col2=$3
     headers=`head -n7 $OFfile |tail -n1 |fmt -1 |nl`
     col1num=`echo "$headers" |grep "$col1" |awk '{print $1}'`
-    col2num=`echo "$headers" |grep "$col2" |awk '{print $1}'`
+    col2num=`echo "$headers" |grep "$col2" |head -n1 |awk '{print $1}'`
 
     tail -n +7 $OFfile | awk -v col1num=$col1num -v col2num=$col2num '{print $col1num, $col2num}'
 }
